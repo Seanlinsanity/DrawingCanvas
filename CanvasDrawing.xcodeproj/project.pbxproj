@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1432001521F46B500026CF87 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432001421F46B500026CF87 /* Canvas.swift */; };
 		14B3B02421EB7E31002F57A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B3B02321EB7E31002F57A6 /* AppDelegate.swift */; };
 		14B3B02621EB7E31002F57A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B3B02521EB7E31002F57A6 /* ViewController.swift */; };
 		14B3B02921EB7E31002F57A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B3B02721EB7E31002F57A6 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1432001421F46B500026CF87 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		14B3B02021EB7E31002F57A6 /* CanvasDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B3B02321EB7E31002F57A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14B3B02521EB7E31002F57A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1432001621F46B6C0026CF87 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				14B3B02521EB7E31002F57A6 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1432001721F46B760026CF87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1432001421F46B500026CF87 /* Canvas.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		14B3B01721EB7E31002F57A6 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +72,9 @@
 		14B3B02221EB7E31002F57A6 /* CanvasDrawing */ = {
 			isa = PBXGroup;
 			children = (
+				1432001721F46B760026CF87 /* View */,
+				1432001621F46B6C0026CF87 /* Controller */,
 				14B3B02321EB7E31002F57A6 /* AppDelegate.swift */,
-				14B3B02521EB7E31002F57A6 /* ViewController.swift */,
 				14B3B02721EB7E31002F57A6 /* Main.storyboard */,
 				14B3B02A21EB7E34002F57A6 /* Assets.xcassets */,
 				14B3B02C21EB7E34002F57A6 /* LaunchScreen.storyboard */,
@@ -137,6 +156,7 @@
 			files = (
 				14B3B02621EB7E31002F57A6 /* ViewController.swift in Sources */,
 				14B3B02421EB7E31002F57A6 /* AppDelegate.swift in Sources */,
+				1432001521F46B500026CF87 /* Canvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3C8CYW7DN6;
 				INFOPLIST_FILE = CanvasDrawing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3C8CYW7DN6;
 				INFOPLIST_FILE = CanvasDrawing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

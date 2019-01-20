@@ -1,22 +1,32 @@
 //
-//  ViewController.swift
+//  Canvas.swift
 //  CanvasDrawing
 //
-//  Created by SEAN on 2019/1/13.
+//  Created by SEAN on 2019/1/20.
 //  Copyright © 2019 SEAN. All rights reserved.
 //
 
 import UIKit
 
 class Canvas: UIView {
-    var lines = [[CGPoint]]()
+    private var lines = [[CGPoint]]()
+    
+    func undo() {
+        _ = lines.popLast()
+        setNeedsDisplay()
+    }
+    
+    func clear() {
+        lines.removeAll()
+        setNeedsDisplay()
+    }
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
         guard let context = UIGraphicsGetCurrentContext() else { return }
         context.setLineCap(.round)
-        context.setStrokeColor(UIColor.green.cgColor)
+        context.setStrokeColor(UIColor.blue.cgColor)
         context.setLineWidth(8)
         
         lines.forEach { (line) in
@@ -46,19 +56,3 @@ class Canvas: UIView {
         setNeedsDisplay()
     }
 }
-
-class ViewController: UIViewController {
-    
-    let canvas = Canvas()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.addSubview(canvas)
-        canvas.backgroundColor = .white
-        canvas.frame = view.frame
-    }
-
-
-}
-
