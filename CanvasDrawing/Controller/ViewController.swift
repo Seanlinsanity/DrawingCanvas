@@ -30,6 +30,22 @@ class ViewController: UIViewController {
         return btn
     }()
     
+    let slider: UISlider = {
+        let slider = UISlider()
+        slider.maximumValue = 10
+        slider.minimumValue = 1
+        slider.addTarget(self, action: #selector(handleChangeWidth), for: .valueChanged)
+        return slider
+    }()
+    
+    @objc private func handleChangeColor(button: UIButton) {
+        canvas.changeStrokeColor(color: button.backgroundColor ?? .black)
+    }
+    
+    @objc private func handleChangeWidth(){
+        canvas.changeStrokeWidth(value: CGFloat(slider.value))
+    }
+    
     @objc private func handleUndo() {
         canvas.undo()
     }
@@ -49,15 +65,30 @@ class ViewController: UIViewController {
     }
 
     private func setupLayout() {
-        let stackView = UIStackView(arrangedSubviews: [undoButton, clearButton])
+        let colorStackView = UIStackView(arrangedSubviews: [getColorButton(color: .yellow), getColorButton(color: .red), getColorButton(color: .blue)])
+        colorStackView.distribution = .fillEqually
+        
+        let stackView = UIStackView(arrangedSubviews: [undoButton, clearButton, colorStackView, slider])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fillEqually
+        stackView.spacing = 16
         view.addSubview(stackView)
         
         stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8).isActive = true
         stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        stackView.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        stackView.heightAnchor.constraint(equalToConstant: 32).isActive = true
+    }
+    
+    func getColorButton(color: UIColor) -> UIButton{
+        let colorButton: UIButton = {
+            let btn = UIButton(type: .system)
+            btn.backgroundColor = color
+            btn.layer.borderWidth = 1
+            btn.addTarget(self, action: #selector(handleChangeColor), for: .touchUpInside)
+            return btn
+        }()
+        return colorButton
     }
 }
 

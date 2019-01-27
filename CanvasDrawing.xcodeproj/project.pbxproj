@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1432001521F46B500026CF87 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1432001421F46B500026CF87 /* Canvas.swift */; };
+		14AC2DAE21FDC67700FFCD53 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC2DAD21FDC67700FFCD53 /* Line.swift */; };
 		14B3B02421EB7E31002F57A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B3B02321EB7E31002F57A6 /* AppDelegate.swift */; };
 		14B3B02621EB7E31002F57A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B3B02521EB7E31002F57A6 /* ViewController.swift */; };
 		14B3B02921EB7E31002F57A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B3B02721EB7E31002F57A6 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		1432001421F46B500026CF87 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		14AC2DAD21FDC67700FFCD53 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		14B3B02021EB7E31002F57A6 /* CanvasDrawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanvasDrawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B3B02321EB7E31002F57A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14B3B02521EB7E31002F57A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		14AC2DAC21FDC66300FFCD53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14AC2DAD21FDC67700FFCD53 /* Line.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		14B3B01721EB7E31002F57A6 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		14B3B02221EB7E31002F57A6 /* CanvasDrawing */ = {
 			isa = PBXGroup;
 			children = (
+				14AC2DAC21FDC66300FFCD53 /* Model */,
 				1432001721F46B760026CF87 /* View */,
 				1432001621F46B6C0026CF87 /* Controller */,
 				14B3B02321EB7E31002F57A6 /* AppDelegate.swift */,
@@ -155,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B3B02621EB7E31002F57A6 /* ViewController.swift in Sources */,
+				14AC2DAE21FDC67700FFCD53 /* Line.swift in Sources */,
 				14B3B02421EB7E31002F57A6 /* AppDelegate.swift in Sources */,
 				1432001521F46B500026CF87 /* Canvas.swift in Sources */,
 			);
